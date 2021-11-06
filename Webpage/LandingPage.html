@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /*
+        Resolution: 1903px x 937px
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            color: #fff;
+            margin: 0;
+        }
+
+        header {
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("header.jpg");
+            background-repeat: no-repeat;
+            height: 600px;
+            width: 100%;
+            background-size: cover;
+            object-fit: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        nav {
+            padding: 20px;
+            position: relative;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            text-align: center;
+            margin: 15px;
+            float: right;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .cs193x {
+            font-size: 40px;
+        }
+
+        .takeaction {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 140px;
+            border: 1px solid #FFF;
+            padding: 10px 15px;
+            border-radius: 100px;
+            margin-top: -10px;
+        }
+
+        .takeaction:hover {
+            color: black;
+            background-color: #FFF;
+            transition: 0.3s;
+        }
+
+        #title {
+            width: 1920px;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            margin: 8% auto 0;
+            position: relative;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .maintitle {
+            font-size: 90px;
+            margin: 0;
+        }
+
+        button {
+            font-family: 'Lora', serif;
+            font-size: 20px;
+            background-color: rgb(54, 179, 168);
+            border: none;
+            color: #FFF;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 100px;
+        }
+
+        button:hover {
+            background-color: rgba(54, 173, 163, 0.6);
+        }
+
+        .center-align {
+            display: flex;
+            justify-content: center;
+        }
+
+        section {
+            margin: 100px 125px;
+            text-align: center;
+        }
+
+        .textbox, .album-content {
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .textbox {
+            width: 900px;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            margin: 5% auto 0;
+            position: relative;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .second-title {
+            font-size: 28px;
+            line-height: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .textbox_content {
+            width: 60%;
+            margin: auto;
+            line-height: 36px;
+        }
+
+        .album {
+            margin: 110px auto 0;
+            width: 1400px;
+        }
+
+        .album-item:first-child {
+            width: calc((100% - 40px) / 2);
+            float: left;
+        }
+
+        .album-item {
+            width: calc((100% - 40px) / 2);
+            float: right;
+        }
+
+        .img-header {
+            text-align: center;
+            color: rgb(61, 153, 145);
+            margin-top: 14px;
+            letter-spacing: 4px;
+            font-weight: 600;
+        }
+
+        .img-content {
+            margin: 24px auto 0;
+            line-height: 36px;
+            width: 70%;
+        }
+
+        footer {
+            box-sizing: content-box;
+            display: inline-block;
+            margin-top: 10%;
+            padding: 75px;
+            background-color: black;
+            width: 1753px;
+        }
+
+        .foot-header {
+            font-family: sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+        }
+
+        .foot-content {
+            font-family: serif;
+            font-size: 0.9rem;
+            color: #777;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li style="float:left; margin-top: 0;">
+                        <a class="cs193x" href="#cs193x">CS 193x</a>
+                    </li>
+                    <li>
+                        <a class="takeaction" href="#home">TAKE ACTION</a>
+                    </li>
+                    <li>
+                        <a href="#readme">READ ME</a>
+                    </li>
+                    <li>
+                        <a href="#news">NEWS</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#home">HOME</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="title">
+                <p class="subtitle center-align">
+                    Sustainability
+                </p>
+                <p class="maintitle center-align">
+                    STARTS WITH YOU
+                </p>
+                <div class="center-align">
+                    <button type="button">LEARN MORE</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="textbox">
+            <p class="second-title">
+                We conserve land through outreach, restoration, and research.
+            </p>
+            <p class="textbox_content">
+                Some of the Earth's greatest landscapes are threaten by increased road construction, oil
+                and gas exploration, and mining. We aim to protect these areas
+                from inappropriate development, but we cannot achieve our goals alone. Find out
+                how you can help.
+            </p>
+        </div>
+        <div class="album">
+            <div class="album-item">
+                <img src="body-image-1.jpg" alt="image-1" width="666" height="374" />
+                <div class="album-content">
+                    <h1 class="img-header">
+                        About
+                    </h1>
+                    <p class="img-content">
+                        Find out about our organization, mission, our methods, and the results of our decades of
+                        advocacy.
+                    </p>
+                </div>
+            </div>
+            <div class="album-item">
+                <img src="body-image-2.jpg" alt="image-2" width="666" height="374" />
+                <div class="album-content">
+                    <h1 class="img-header">
+                        Take actions
+                    </h1>
+                    <p class="img-content">
+                        Ready to take the next step? You can become a contributor to our cause, or participate
+                        yourself.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <h1 class="foot-header">
+                CS193X, SHRIRAM CENTER 104
+            </h1>
+            <p class="foot-content">
+                Powered by competence
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
