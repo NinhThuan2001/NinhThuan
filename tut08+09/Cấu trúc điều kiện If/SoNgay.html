@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <h1>Tính số ngày trong một tháng</h1>
+            <label>Nhập tháng bạn muốn: </label>
+            <input type = "number"  id="month" name="month">
+            <br>
+            <button onclick="Day()">Kết quả</button>
+            <br>
+            <span id="result">Result</span>
+    </main>
+    <script>
+        let month;
+        function Day() {
+          let month = document.getElementById("month").value;
+          if(month == 2) {
+              result.innerHTML='Số ngày trong tháng là 28 hoặc 29 ngày';
+          } else if (month ==  4 || month == 6 || month == 9 || month == 11){
+            result.innerHTML='Số ngày trong tháng là 30 ngày';
+          } else {
+            result.innerHTML='Số ngày trong tháng là 31 ngày';
+          }
+        }
+    </script>
+</body>
+</html>

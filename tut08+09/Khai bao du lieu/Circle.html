@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Tính chu vi - diện tích hình tròn</h1>
+            <label>Nhập bán kính hình tròn: </label>
+            <input type = "number"  id="radius" name="input">
+            <button onclick="Cal()">Tính</button>
+            <p class="result">Kết quả</p>
+            <p class = "cir">Chu vi: </p>
+            <p class = "acr">Diện tích:</p>
+            <p class = "dia">Đường kính:</p>
+        </div>
+    </main>
+    <script>
+        let r
+        function Cal() {
+            let r = document.getElementById("radius").value;
+            if(r > 0){
+                result.innerHTML='Chu vi là: ' + 2*3.14*r;
+                result.innerHTML= 'Diện tích là: ' + 3.14*r*r;
+                result.innerHTML= 'Đường kính là: ' + 2*r;
+            } else {
+                result.innerHTML = 'Yêu cầu nhập lại dữ liệu'; 
+            }
+        }
+    </script>
+</body>
+</html>

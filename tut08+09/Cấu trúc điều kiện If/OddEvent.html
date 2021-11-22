@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2>Kiểm tra tính chẵn lẻ</h2>
+        <label>Nhập số: </label>
+        <br>
+        <input type = "number"  id="number" name="number">
+        <button onclick="Check()">Kiểm tra</button>
+    </main>
+    <script>
+        function Check() {
+            let number = document.getElementById("number").value;
+            if (number > 0 && number % 2 == 0) {
+                alert(number + " là số chẵn");
+            } else if (number > 0 && number % 2 == 1) {
+                alert(number + " là số lẻ");
+            } else {
+                alert ("Mời bạn nhập lại số!");
+            }
+        }
+    </script>
+</body>
+</html>

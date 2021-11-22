@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pt-4 {
+            margin-top: 20px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header></header>
+        <main>
+            <h1>Caculator</h1>
+            <form action="#" method="post">
+                <input type="number" name="firstNumber" id="firstNumber" auto placeholder="Enter the first number">
+                <input type="number" name="secondNumber" id="secondNumber" auto placeholder="Enter the first number">
+            </br>
+            <div class="p1-4">
+                <button id="addButton">Addition (+)</button>
+                <button id="subButton">Subtraction (-)</button>
+                <button id="mulButton">Multiple (*)</button>
+                <button id="divButton">Division (/)</button>
+            </div>
+            </form>
+            <div class="pt-4">
+                <span id="result">Result</span>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+<script>
+    let firstNumber, secondNumber;
+    let firstNumberInput = document.getElementById('firstNumber');
+    let secondNumberInput = document.getElementById('secondNumber');
+    let addButton = document.getElementById('addButton');
+    let subButton = document.getElementById('subButton');
+    let mulButton = document.getElementById('mulButton');
+    let divButton = document.getElementById('divButton');
+    let result = document.getElementById('result');
+
+    function getNumbers() {
+        firstNumber = parseFloat(firstNumberInput.value);
+        secondNumber = parseFloat(secondNumberInput.value);
+    }
+    addButton.addEventListener('click', function (){
+        event.preventDefault();
+        getNumbers();
+        result.innerText = 'Result Addition: ' + (firstNumber + secondNumber); 
+    });
+    subButton.addEventListener('click', function (){
+        event.preventDefault();
+        getNumbers();
+        result.innerText = 'Result Subtraction: ' + (firstNumber - secondNumber); 
+    });
+    mulButton.addEventListener('click', function (){
+        event.preventDefault();
+        getNumbers();
+        result.innerText = 'Result Multiplication: ' + (firstNumber * secondNumber); 
+    });
+    divButton.addEventListener('click', function (){
+        event.preventDefault();
+        getNumbers();
+        result.innerText = 'Result Devision: ' + (firstNumber / secondNumber); 
+    });
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            position: relative;
+        }
+        body {
+            font-size: 25px;
+        }
+        .container {
+            position: relative;
+            line-height: 3.2rem;
+            text-align: center;
+        }
+        .loca {
+            padding-right: 10px;
+        }
+        .kv {
+            padding-right: 100px;
+        }
+        button {
+            border-width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class = "container">
+        <h2>Tính điểm ĐH khối D</h2>
+        <label> Môn Toán</label>
+        <input type = number id="math" name="math">
+        <br>
+        <label> Môn Văn</label>
+        <input type = number id="liter" name="liter">
+        <br>
+        <label> Môn Anh</label>
+        <input type = number id="eng" name="eng">
+        <br>
+        <div class="kv">
+        <label class="loca"> Khu vực</label>
+        <select name="", id="location">
+            <option value="kv1">KV1</option>
+            <option value="kv2">KV2</option>
+            <option value="kv2-nt">KV2-NT</option>
+            <option value="kv3">KV3</option>
+        </select>
+        </div>
+        <br>
+        <button onclick="Cal()">Tính điểm</button>
+    </div>
+    </main>
+    <script>
+        function Cal() {
+            let math = document.getElementById('math').value;
+            let liter = document.getElementById('liter').value;
+            let eng = document.getElementById('eng').value;
+            let location = document.getElementById('location').value;
+            let sum = math + liter + eng;
+            if (location == "kv1") {
+                alert('Tổng điểm thi đại học của bạn là: ' + (sum + 0.75));
+            } else if (location == "kv2"){
+                alert('Tổng điểm thi đại học của bạn là: ' + (sum + 0.5));
+            } else if (location == "kv2-nt"){
+                alert('Tổng điểm thi đại học của bạn là: ' + (sum + 0.25));
+            } else {
+                alert('Tổng điểm thi đại học của bạn là: ' + sum);
+            }
+        }
+    </script>
+</body>
+</html>

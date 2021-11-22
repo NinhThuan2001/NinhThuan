@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tank Game</title>
+</head>
+<body onload="startGame">
+    <div class="container">
+        <canvas id="game" width = "800" height = "600" style="border: 3px solid #000000"></canvas>
+    <img id = "tank" scr= "tank.png"
+    style="position: relative; top: 0px; left: 0px;"
+    width = "19" height = "19">
+    </br>
+        <button onclick="moveCarUp()">Up</button>
+        <button onclick="moveCarDown()">Down</button>
+        <button onclick="moveCarLeft()">Left</button>
+        <button onclick="moveCarRight()">Right</button>
+    </div>
+    <script>
+        let gameContext = document.getElementById("game").getContext("2d");
+        let rectX = rectY =  19;
+        let speed = 20;
+        let canvasHeight = 600;
+        let canvasWidth = 800;
+        let tankHeight = 20;
+        let tankWidth = 20;
+        function start() {
+            drawRect();
+        }
+        function isReachTop() {
+            return rectY == 0;
+        }
+        function isReachBottom() {
+            return rectY + rectHeight >= canvasHeight;
+        }
+        function drawTank() {
+            gameContext.beginPath();
+            gameContext.fillStyle = '#fa4b2a';
+            gameContext.fillTank(rectX, rectY, 150, 100);
+        }
+        function moveCarUp() {
+            gameContext.clearRect(rectX, rectY, 150, 100);
+            if (rectY > 0) {
+            rectY -= speed;
+            }
+            drawRect();
+        }
+        function moveCarDown() {
+            gameContext.clearRect(rectX, rectY, 150, 100);
+            if (rectY + 100 < 600) {
+            rectY += speed;
+            }
+            drawRect();
+        }
+        function moveCarRight() {
+            gameContext.clearRect(rectX, rectY, 150, 100);
+            if (rectX + 150 < 800) {
+                rectX += speed;
+            }
+            drawRect();
+        }
+        function moveCarRight() {
+            gameContext.clearRect(rectX, rectY, 150, 100);
+            if (rectX > 0) {
+            rectX -= speed;
+            }
+            drawRect();
+        }
+    </script>
+</body>
+</html>

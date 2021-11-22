@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tienVao= prompt("Nhập số tiền của bạn: ");
+        let tienVay = parseInt(tienVao);
+        let lai=prompt("Nhập lãi suất:  ");
+        let laiSuat = parseFloat(lai);
+        let nam=prompt("Nhập số năm bạn muốn: ");
+        let soNam = parseInt(nam);
+        let ketqua = tienVay * laiSuat ;
+        let tien = tienVay + soNam *  ketqua;
+        document.write("Số tiền sau " + soNam + " năm của bạn là: " + tien);
+    </script>
+</body>
+</html>
